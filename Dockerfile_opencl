@@ -18,5 +18,5 @@ WORKDIR /whisper.cpp
 # Download a Whisper model
 RUN bash ./models/download-ggml-model.sh large
 
-# build the main example
-RUN make
+# build with CLBlast support
+RUN make clean ; WHISPER_CLBLAST=1 make -j
