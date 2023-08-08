@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Install CMake
-RUN apt-get update && apt-get install -y cmake
+RUN apt-get update && apt-get install -y cmake git curl build-essential
 
 # Clone the project files into the Docker image
 RUN git clone https://github.com/ggerganov/whisper.cpp
