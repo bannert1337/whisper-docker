@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y cmake git curl build-essential
 
 # Install OpenCL library
 RUN apt install -y ocl-icd-opencl-dev
+RUN apt install -y intel-opencl-icd
 
 # Install CLBlast library
 RUN apt install -y libclblast-dev
